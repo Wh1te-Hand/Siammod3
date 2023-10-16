@@ -76,6 +76,7 @@ namespace Siammod3
             }
         }
 
+
         private void textBox_numberTacts_KeyPress(object sender, KeyPressEventArgs e)
         {
             char number = e.KeyChar;
