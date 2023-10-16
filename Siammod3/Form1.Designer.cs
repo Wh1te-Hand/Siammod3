@@ -39,6 +39,18 @@
             this.textBox_numberTacts = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label_Wqueue = new System.Windows.Forms.Label();
+            this.label_Lrequest = new System.Windows.Forms.Label();
+            this.label_Wsystem = new System.Windows.Forms.Label();
+            this.label_Plocks = new System.Windows.Forms.Label();
+            this.label_Lqueue = new System.Windows.Forms.Label();
+            this.label_k1 = new System.Windows.Forms.Label();
+            this.label_lambda = new System.Windows.Forms.Label();
+            this.label_Preject = new System.Windows.Forms.Label();
+            this.label_k2 = new System.Windows.Forms.Label();
+            this.label_Q = new System.Windows.Forms.Label();
+            this.label_A = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -49,18 +61,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.label_Number = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -132,6 +134,7 @@
             this.button_calculate.TabIndex = 8;
             this.button_calculate.Text = "calculate";
             this.button_calculate.UseVisualStyleBackColor = true;
+            this.button_calculate.Click += new System.EventHandler(this.button_calculate_Click);
             // 
             // textBox_numberTacts
             // 
@@ -153,17 +156,19 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label_Number);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Controls.Add(this.label_Wqueue);
+            this.groupBox2.Controls.Add(this.label_Lrequest);
+            this.groupBox2.Controls.Add(this.label_Wsystem);
+            this.groupBox2.Controls.Add(this.label_Plocks);
+            this.groupBox2.Controls.Add(this.label_Lqueue);
+            this.groupBox2.Controls.Add(this.label_k1);
+            this.groupBox2.Controls.Add(this.label_lambda);
+            this.groupBox2.Controls.Add(this.label_Preject);
+            this.groupBox2.Controls.Add(this.label_k2);
+            this.groupBox2.Controls.Add(this.label_Q);
+            this.groupBox2.Controls.Add(this.label_A);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label13);
@@ -181,6 +186,114 @@
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Analytical variables";
+            // 
+            // label_Wqueue
+            // 
+            this.label_Wqueue.AutoSize = true;
+            this.label_Wqueue.Location = new System.Drawing.Point(181, 365);
+            this.label_Wqueue.Name = "label_Wqueue";
+            this.label_Wqueue.Size = new System.Drawing.Size(11, 16);
+            this.label_Wqueue.TabIndex = 27;
+            this.label_Wqueue.Text = "-";
+            // 
+            // label_Lrequest
+            // 
+            this.label_Lrequest.AutoSize = true;
+            this.label_Lrequest.Location = new System.Drawing.Point(180, 286);
+            this.label_Lrequest.Name = "label_Lrequest";
+            this.label_Lrequest.Size = new System.Drawing.Size(11, 16);
+            this.label_Lrequest.TabIndex = 26;
+            this.label_Lrequest.Text = "-";
+            // 
+            // label_Wsystem
+            // 
+            this.label_Wsystem.AutoSize = true;
+            this.label_Wsystem.Location = new System.Drawing.Point(180, 327);
+            this.label_Wsystem.Name = "label_Wsystem";
+            this.label_Wsystem.Size = new System.Drawing.Size(11, 16);
+            this.label_Wsystem.TabIndex = 25;
+            this.label_Wsystem.Text = "-";
+            // 
+            // label_Plocks
+            // 
+            this.label_Plocks.AutoSize = true;
+            this.label_Plocks.Location = new System.Drawing.Point(181, 214);
+            this.label_Plocks.Name = "label_Plocks";
+            this.label_Plocks.Size = new System.Drawing.Size(11, 16);
+            this.label_Plocks.TabIndex = 24;
+            this.label_Plocks.Text = "-";
+            // 
+            // label_Lqueue
+            // 
+            this.label_Lqueue.AutoSize = true;
+            this.label_Lqueue.Location = new System.Drawing.Point(181, 248);
+            this.label_Lqueue.Name = "label_Lqueue";
+            this.label_Lqueue.Size = new System.Drawing.Size(11, 16);
+            this.label_Lqueue.TabIndex = 23;
+            this.label_Lqueue.Text = "-";
+            // 
+            // label_k1
+            // 
+            this.label_k1.AutoSize = true;
+            this.label_k1.Location = new System.Drawing.Point(181, 129);
+            this.label_k1.Name = "label_k1";
+            this.label_k1.Size = new System.Drawing.Size(11, 16);
+            this.label_k1.TabIndex = 22;
+            this.label_k1.Text = "-";
+            // 
+            // label_lambda
+            // 
+            this.label_lambda.AutoSize = true;
+            this.label_lambda.Location = new System.Drawing.Point(180, 103);
+            this.label_lambda.Name = "label_lambda";
+            this.label_lambda.Size = new System.Drawing.Size(11, 16);
+            this.label_lambda.TabIndex = 21;
+            this.label_lambda.Text = "-";
+            // 
+            // label_Preject
+            // 
+            this.label_Preject.AutoSize = true;
+            this.label_Preject.Location = new System.Drawing.Point(180, 183);
+            this.label_Preject.Name = "label_Preject";
+            this.label_Preject.Size = new System.Drawing.Size(11, 16);
+            this.label_Preject.TabIndex = 20;
+            this.label_Preject.Text = "-";
+            // 
+            // label_k2
+            // 
+            this.label_k2.AutoSize = true;
+            this.label_k2.Location = new System.Drawing.Point(181, 156);
+            this.label_k2.Name = "label_k2";
+            this.label_k2.Size = new System.Drawing.Size(11, 16);
+            this.label_k2.TabIndex = 19;
+            this.label_k2.Text = "-";
+            // 
+            // label_Q
+            // 
+            this.label_Q.AutoSize = true;
+            this.label_Q.Location = new System.Drawing.Point(181, 74);
+            this.label_Q.Name = "label_Q";
+            this.label_Q.Size = new System.Drawing.Size(14, 16);
+            this.label_Q.TabIndex = 18;
+            this.label_Q.Text = "- ";
+            // 
+            // label_A
+            // 
+            this.label_A.AutoSize = true;
+            this.label_A.Location = new System.Drawing.Point(181, 47);
+            this.label_A.Name = "label_A";
+            this.label_A.Size = new System.Drawing.Size(14, 16);
+            this.label_A.TabIndex = 17;
+            this.label_A.Text = "- ";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(20, 365);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(72, 16);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "W_queue=";
             // 
             // label12
             // 
@@ -272,113 +385,23 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "A=";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(20, 365);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(72, 16);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "W_queue=";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(181, 365);
+            this.label15.Location = new System.Drawing.Point(19, 398);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(11, 16);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "-";
+            this.label15.Size = new System.Drawing.Size(105, 16);
+            this.label15.TabIndex = 28;
+            this.label15.Text = "Number_in_QS=";
             // 
-            // label16
+            // label_Number
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(180, 286);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(11, 16);
-            this.label16.TabIndex = 26;
-            this.label16.Text = "-";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(180, 327);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(11, 16);
-            this.label17.TabIndex = 25;
-            this.label17.Text = "-";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(181, 214);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(11, 16);
-            this.label18.TabIndex = 24;
-            this.label18.Text = "-";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(181, 248);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(11, 16);
-            this.label19.TabIndex = 23;
-            this.label19.Text = "-";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(181, 129);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(11, 16);
-            this.label20.TabIndex = 22;
-            this.label20.Text = "-";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(180, 103);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(11, 16);
-            this.label21.TabIndex = 21;
-            this.label21.Text = "-";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(180, 183);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(11, 16);
-            this.label22.TabIndex = 20;
-            this.label22.Text = "-";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(181, 156);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(11, 16);
-            this.label23.TabIndex = 19;
-            this.label23.Text = "-";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(181, 74);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(14, 16);
-            this.label24.TabIndex = 18;
-            this.label24.Text = "- ";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(181, 47);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(14, 16);
-            this.label25.TabIndex = 17;
-            this.label25.Text = "- ";
+            this.label_Number.AutoSize = true;
+            this.label_Number.Location = new System.Drawing.Point(180, 398);
+            this.label_Number.Name = "label_Number";
+            this.label_Number.Size = new System.Drawing.Size(11, 16);
+            this.label_Number.TabIndex = 29;
+            this.label_Number.Text = "-";
             // 
             // Form1
             // 
@@ -419,18 +442,20 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label_Wqueue;
+        private System.Windows.Forms.Label label_Lrequest;
+        private System.Windows.Forms.Label label_Wsystem;
+        private System.Windows.Forms.Label label_Plocks;
+        private System.Windows.Forms.Label label_Lqueue;
+        private System.Windows.Forms.Label label_k1;
+        private System.Windows.Forms.Label label_lambda;
+        private System.Windows.Forms.Label label_Preject;
+        private System.Windows.Forms.Label label_k2;
+        private System.Windows.Forms.Label label_Q;
+        private System.Windows.Forms.Label label_A;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label_Number;
+        private System.Windows.Forms.Label label15;
     }
 }
 
