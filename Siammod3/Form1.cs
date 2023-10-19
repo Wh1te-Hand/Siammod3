@@ -61,7 +61,7 @@ namespace Siammod3
             Regex reg2 = new Regex(@"0");
             Regex reg3 = new Regex(@"1");
             line = this.textBox_p2.Text; //changed
-            if (line != "" && (reg1.IsMatch(line)||reg2.IsMatch(line) || reg3.IsMatch(line)))
+            if (line != "" && (reg1.IsMatch(line) || line == "0" || line == "1"))
             {
                 N_number = double.Parse(line, CultureInfo.InvariantCulture.NumberFormat);
                 if (N_number != double.NaN)
@@ -104,7 +104,7 @@ namespace Siammod3
             Regex reg2 = new Regex(@"0");
             Regex reg3 = new Regex(@"1");
             line = this.textBox_p1.Text; //changed
-            if (line != ""&& (reg1.IsMatch(line) || reg2.IsMatch(line) || reg3.IsMatch(line)))
+            if (line != "" && (reg1.IsMatch(line) || line =="0" ||line=="1"))
             {
                 N_number = double.Parse(line, CultureInfo.InvariantCulture.NumberFormat);
                 if ( N_number != double.NaN)
